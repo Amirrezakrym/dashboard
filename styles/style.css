@@ -11,8 +11,9 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
-    transition: 0.3s;
+    transition: 3s;
 }
+
 .logo{
     font-size: 15px;
     color: #fff;
@@ -26,7 +27,10 @@
     top: 0;
     background: linear-gradient(to bottom, #151728 0%, #151728 76%, rgba(21, 23, 40, 0) 100%);
 }
-.slide-wrapper{
+.slide-wrapper-1{
+    padding: 30px;
+}
+.slide-wrapper-2{
     padding: 30px;
 }
 .side-title{
@@ -47,6 +51,7 @@
     display: flex;
     color: #9c9cab;
     text-align: center;
+    white-space: nowrap;
 }
 .side-menu svg {
     width: 16px;
@@ -108,16 +113,38 @@
     top: 0;
 }
 @media (max-width: 991px){
+    .back-div{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+    .close-back-div{
+        background-color: rgba(0,0,0,0.3);
+        transform: translateX(260px);
+        transition: all 1s;
+    }
     .left-side{
         width: 56px;
-        /* overflow: hidden; */
+        overflow: hidden;
+        transition: all 1s;
+
     }
-    .slide-wrapper{
-        opacity: 0;
+    .open{
+        /* position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0; */
+        background-color: #151728;
+        width: 260px;
+        transition: all 1s;
+        overflow: auto;
     }
-    .follow-me{
-        opacity: 0;
-    }
+    
+   
     .left-side-button{
         display: flex;
         align-items: center;
@@ -136,12 +163,18 @@
         width: 24px;
         transition: 0.2s;
     }
-    .left-side-button svg:last-child {
+    .hamb-opacity{
+        opacity: 0 !important;
+    }
+    .hamb{
+        opacity: 1;
+    }
+    .felesh-opacity{
+        opacity: 1 !important;
+    }
+    .felesh{
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(100%, -50%);
-        opacity: 0;
+          opacity: 0;
     }
     .logo{
         display: flex;
@@ -149,7 +182,44 @@
         transform: rotate(180deg);
         transform-origin: bottom;
         writing-mode: vertical-lr;
-        margin-top: -10px;
+        transition: all .2s;
+        position: sticky;
+        top: 0;
     }
+    .logo-open{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        transform: none;
+        writing-mode: lr;
+        transition: all .2s;
+    }
+    .slide-wrapper-1{
+        opacity: 0;
+    }
+    .slide-wrapper-1-opacity{
+        opacity: 1;
+    }
+    .slide-wrapper-2{
+        opacity: 0;
+    }
+    .slide-wrapper-2-opacity{
+        opacity: 1;
+    }
+    .follow-me-opacity{
+        opacity: 1 !important;
+    }
+    .follow-me{
+        opacity: 0;
+    }
+    
+}
+@media (max-width: 767px){
+   
 
+}
+@media (max-width: 575px){
+    
 }
