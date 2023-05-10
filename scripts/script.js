@@ -1,7 +1,7 @@
 // variable
     let LeftSlid = document.querySelector('.left-side')
     let leftSideButton = document.querySelector('.left-side-button')
-    let BackDiv = document.querySelector('.back-div')
+    let BackDivLeft = document.querySelector('.back-div-left')
     let felesh = document.querySelector('.felesh')
     let hamb = document.querySelector('.hamb')
     let logo = document.querySelector('.logo')
@@ -13,7 +13,7 @@
     leftSideButton.addEventListener('click',function(){
 
     LeftSlid.classList.toggle("open")
-    BackDiv.classList.toggle("close-back-div")
+    BackDivLeft.classList.toggle("close-back-div-left")
     
     // button opacity
     hamb.classList.toggle("hamb-opacity")
@@ -31,10 +31,10 @@
 
 
 
-    BackDiv.addEventListener('click',function(){
+    BackDivLeft.addEventListener('click',function(){
 
     LeftSlid.classList.remove("open")
-    BackDiv.classList.remove("close-back-div")
+    BackDivLeft.classList.remove("close-back-div-left")
 
      // opacity
      hamb.classList.toggle("hamb-opacity")

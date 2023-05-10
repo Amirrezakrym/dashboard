@@ -11,7 +11,6 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
-    transition: 3s;
 }
 
 .logo{
@@ -52,6 +51,7 @@
     color: #9c9cab;
     text-align: center;
     white-space: nowrap;
+    transition: transform .5s;
 }
 .side-menu svg {
     width: 16px;
@@ -62,6 +62,8 @@
 }
 .side-menu a:hover{
     color: #fff;
+    transform: translateX(10px);
+    transition: transform .5s;
 }
 .follow-me{
     text-decoration: none;
@@ -112,8 +114,57 @@
 .follow-me:hover .developer {
     top: 0;
 }
+/* right side */
+.right-side{
+    width: 280px;
+    background-color: #151728;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    overflow: auto;
+}
+.account{
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #151728;
+}
+.account-btn{
+    border: 0;
+    background: 0;
+    color: #64677a;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+}
+.account-btn:not(.right-account-btn) + .account-btn::before{
+    content: " ";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1b86f8;
+    top: -2px;
+    right: 0;
+}
+.account-user{
+    display: inline-flex;
+    align-items: center;
+    color: #64677a;
+    font-weight: 600;
+}
+.account-profile{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
 @media (max-width: 991px){
-    .back-div{
+    .back-div-left{
         position: fixed;
         width: 100%;
         top: 0;
@@ -122,7 +173,7 @@
         transform: translateX(-100%);
         transition: all 1s;
     }
-    .close-back-div{
+    .close-back-div-left{
         background-color: rgba(0,0,0,0.3);
         transform: translateX(260px);
         transition: all 1s;
