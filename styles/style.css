@@ -1,3 +1,6 @@
+body{
+    color: #ccc8db;
+}
 *{
     margin: 0;
     padding: 0;
@@ -162,6 +165,51 @@
     height: 28px;
     border-radius: 50%;
     margin: 0 10px;
+}
+.stories{
+    border-bottom: 1px solid #272a3a;
+}
+.user{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.stories .user-img{
+    border: 2px solid #e2b96c; 
+}
+.user-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.user-name{
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+}
+.stories .album-date {
+    margin-top: 4px;
+    font-size: 15px;
+    color: #595c6c;
+}
+.contacts .user-name{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.user-status{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #7fd222;
+    margin-left: auto;
+}
+.user-status.offline{
+    background-color: #606a8d;
+}
+.user-status.idle{
+    background-color: #dd1c20;
 }
 @media (max-width: 991px){
     .back-div-left{
